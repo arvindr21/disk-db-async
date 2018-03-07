@@ -1,7 +1,7 @@
 # disk-db-async [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
 > disk-db-async
 
-A Lightweight Disk based JSON Database with a MongoDB like API for Node. Rewriting [arvindr21/diskDB](https://github.com/arvindr21/diskDB) to follow TypeScript and latest conventation.
+A Lightweight Disk based JSON Database with a MongoDB like API for Node. Rewriting [arvindr21/diskDB](https://github.com/arvindr21/diskDB) to follow TypeScript and latest convention.
 
 ## Getting started
 - Install: `npm install disk-db-async --save`
@@ -28,8 +28,8 @@ Refer: [DOCS](https://github.com/arvindr21/disk-db-async/DOCS.md)
     npm run release        - prepare package for next release
 
 ## Contribution Guidelines
-    1. Commit Message format must follow [commit-message-guidelines](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#-commit-message-guidelines) 
-    2. This module is setup with `commitizen cz-conventional-changelog` modules to validate commit messages. Refer [Setting up Git message validation hook](https://gist.github.com/bahmutov/a15d49b3fe503fb546fb) from more details.
+1. Commit Message format must follow [commit-message-guidelines](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#-commit-message-guidelines) 
+2. This module is setup with `commitizen cz-conventional-changelog` modules to validate commit messages. Refer [Setting up Git message validation hook](https://gist.github.com/bahmutov/a15d49b3fe503fb546fb) from more details.
 
 ## License
 

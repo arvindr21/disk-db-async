@@ -70,7 +70,7 @@
   "config": {
     "pre-git": {
       "enabled": true,
-      "commit-msg": "simple",
+      "commit-msg": "conventional",
       "msg-pattern-error": "Invalid commit message. Please refer contribution guidelines"
     },
     "commitizen": {
@@ -86,6 +86,6 @@
   "repository": "arvindr21/disk-db-async",
   "license": "MIT",
   "release": {
-    "analyzeCommits": "simple"
+    "analyzeCommits": "conventional"
   }
 }
