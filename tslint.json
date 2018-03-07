@@ -3,6 +3,15 @@
   "rules":
   {
     "eofline": false,
+    "no-var-requires": true,
+    "quotemark": [true, "single"],
+    "ordered-imports": false,
+    "array-type": [true, "generic"],
+    "indent": [true, "tabs"],
+    "member-ordering": [true,
+      "public-before-private",
+      "variables-before-functions"
+    ],
     "quotes": [
       2,
       "backtick",

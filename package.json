@@ -3,6 +3,7 @@
   "devDependencies": {
     "@types/jest": "^20.0.7",
     "@types/node": "^8.9.4",
+    "@types/pino": "^4.7.1",
     "browserify": "^14.4.0",
     "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.1.0",
@@ -10,6 +11,7 @@
     "jest": "^20.0.4",
     "jest-cli": "^20.0.0",
     "nsp": "^2.6.3",
+    "pino": "^4.13.0",
     "pre-git": "^3.17.0",
     "rimraf": "^2.6.1",
     "standard-version": "^4.3.0",

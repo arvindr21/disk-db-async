@@ -1,14 +1,14 @@
 'use strict';
 
 import 'jest';
-import func from '../src';
+const DiskDBAsync = require("../src");
 
-describe('Test', () => {
-    it('is func', () => {
-        expect(typeof func).toBe('function');
+describe('DiskDBAsync.passTests', () => {
+    it('is function', () => {
+        expect(typeof DiskDBAsync.passTests).toBe('function');
     });
 
-    it('1 + 2 = 3', () => {
-        expect(func(1, 2)).toBe(3);
-    });
+    it('returns true', () =>{
+    	 expect(DiskDBAsync.passTests()).toBe(true);
+    	});
 });

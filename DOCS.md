@@ -12,7 +12,30 @@ Documentation for using `disk-db-async`.
 Working with `disk-db-async` module.
 
 #### Create a new instance of `disk-db-async`
+
 ```js
-const DiskDBAsync = require("disk-db-async");
-let db = new DiskDBAsync('/path/to/db-folder', ['collection-name']);
+const DiskDBAsync = require("../disk-db-async/");
+let db = new DiskDBAsync('./_DB/', ['collection-name'], {
+	enableLogs: 0,
+	overRideInvalidJSON: 1
+});
+
+db.connect().then(function(info) {
+    console.log('Connect Success!');
+}).catch(function(err) {
+    console.log('Connect Failed! \n\tErr: ', err);
+});
+```
+
+```bash
+$ node app.js
+Connect Success!
+```
+
+or
+
+```bash
+$ node app.js
+Connect Failed! 
+	Err:  Invalid File System path provided
 ```
