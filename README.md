@@ -7,7 +7,7 @@ A Lightweight Disk based JSON Database with a MongoDB like API for Node. Rewriti
 - Install: `npm install disk-db-async --save`
 
 ## Documentation
-Refer: [DOCS](https://github.com/arvindr21/disk-db-async/DOCS.md)
+Refer: [DOCS](https://github.com/arvindr21/disk-db-async/blob/master/DOCS.md)
 
 ## Development Workflow
 1. Fork & Clone Repo `git clone https://github.com/<<username>>/disk-db-async`
