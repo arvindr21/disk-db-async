@@ -1,0 +1,91 @@
+{
+  "version": "0.1.0",
+  "devDependencies": {
+    "@types/jest": "^20.0.7",
+    "@types/node": "^8.9.4",
+    "browserify": "^14.4.0",
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.1.0",
+    "generate-changelog": "^1.7.0",
+    "jest": "^20.0.4",
+    "jest-cli": "^20.0.0",
+    "nsp": "^2.6.3",
+    "pre-git": "^3.17.0",
+    "rimraf": "^2.6.1",
+    "standard-version": "^4.3.0",
+    "ts-jest": "^20.0.10",
+    "ts-loader": "^2.3.3",
+    "tslint": "^5.6.0",
+    "tslint-loader": "^3.5.3",
+    "typescript": "^2.4.2",
+    "webpack": "^3.5.5",
+    "webpack-node-externals": "^1.6.0"
+  },
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "clean": "rimraf lib",
+    "browserify": "browserify -e lib/index.js --standalone diskDbAsync --outfile lib/disk-db-async.browser.js",
+    "build": "npm run clean && tsc && npm run browserify",
+    "test": "jest",
+    "test:watch": "npm test -- --watch",
+    "coverage": "npm test -- --coverage --no-cache",
+    "coverage:watch": "npm run coverage -- --watch",
+    "changelog": "changelog",
+    "release": "standard-version",
+    "prepare": "npm run pretest && npm run build && npm test && npm run prepublish && npm run changelog",
+    "prepublish": "nsp check",
+    "pretest": "tslint --project '.'",
+    "commit": "git-cz",
+    "watch": "tsc --watch"
+  },
+  "dependencies": {},
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "mapCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.ts"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/tests/",
+      "/node_modules/"
+    ],
+    "testEnvironment": "node",
+    "testRegex": "tests/.*\\.spec\\.ts$",
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json"
+    ]
+  },
+  "name": "disk-db-async",
+  "description": "disk-db-async",
+  "homepage": "https://github.com/arvindr21/disk-db-async",
+  "author": {
+    "name": "Arvind Ravulavaru",
+    "email": "arvind.ravulavaru@gmail.com",
+    "url": "https://github.com/arvindr21"
+  },
+  "config": {
+    "pre-git": {
+      "enabled": true,
+      "commit-msg": "simple",
+      "msg-pattern-error": "Invalid commit message. Please refer contribution guidelines"
+    },
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  },
+  "main": "lib/index.js",
+  "keywords": [
+    "diskdb",
+    "file system db",
+    "json db"
+  ],
+  "repository": "arvindr21/disk-db-async",
+  "license": "MIT",
+  "release": {
+    "analyzeCommits": "simple"
+  }
+}

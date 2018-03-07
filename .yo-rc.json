@@ -1,0 +1,9 @@
+{
+  "generator-npm-module-typescript": {
+    "promptValues": {
+      "authorName": "Arvind Ravulavaru",
+      "authorEmail": "arvind.ravulavaru@gmail.com",
+      "authorUrl": "https://github.com/arvindr21"
+    }
+  }
+}

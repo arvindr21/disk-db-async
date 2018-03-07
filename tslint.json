@@ -1,0 +1,12 @@
+{
+  "extends": "tslint:recommended",
+  "rules":
+  {
+    "eofline": false,
+    "quotes": [
+      2,
+      "backtick",
+      "single"
+    ]
+  }
+}
