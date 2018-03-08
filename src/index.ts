@@ -23,7 +23,7 @@ const defaultOptions: IConnOpts = {
 class DiskDBAsync implements IConnection {
 
 	private isPathValid: boolean = false;
-	private areCollectionsValid: boolean = false;
+	private isCollectionsValid: boolean = false;
 	private connection: IConnection = {
 		collections: [''],
 		options: defaultOptions,

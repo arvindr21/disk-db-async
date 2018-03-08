@@ -11,6 +11,7 @@
     "jest": "^20.0.4",
     "jest-cli": "^20.0.0",
     "nsp": "^2.6.3",
+    "onchange": "^3.3.0",
     "pino": "^4.13.0",
     "pre-git": "^3.17.0",
     "rimraf": "^2.6.1",
@@ -38,7 +39,9 @@
     "prepublish": "nsp check",
     "pretest": "tslint --project '.'",
     "commit": "git-cz",
-    "watch": "tsc --watch"
+    "lint+build": "npm run pretest && npm run clean && tsc",
+    "tsc-watch": "tsc --watch",
+    "watch": "onchange \"src/**/*.ts\" -e \"**/*.d.ts\" -w -- npm run lint+build"
   },
   "dependencies": {},
   "jest": {
