@@ -24,10 +24,10 @@
     "webpack": "^3.5.5",
     "webpack-node-externals": "^1.6.0"
   },
-  "typings": "lib/index.d.ts",
+  "typings": "dist/index.d.ts",
   "scripts": {
-    "clean": "rimraf lib",
-    "browserify": "browserify -e lib/index.js --standalone diskDbAsync --outfile lib/disk-db-async.browser.js",
+    "clean": "rimraf dist",
+    "browserify": "browserify -e dist/index.js --standalone diskDbAsync --outfile dist/disk-db-async.browser.js",
     "build": "npm run clean && tsc && npm run browserify",
     "test": "jest",
     "test:watch": "npm test -- --watch",
@@ -39,11 +39,13 @@
     "prepublish": "nsp check",
     "pretest": "tslint --project '.'",
     "commit": "git-cz",
-    "lint+build": "npm run pretest && npm run clean && tsc",
+    "lint+build": "npm run pretest && tsc && echo \"***** Linting & Build Success *****\"",
     "tsc-watch": "tsc --watch",
     "watch": "onchange \"src/**/*.ts\" -e \"**/*.d.ts\" -w -- npm run lint+build"
   },
-  "dependencies": {},
+  "dependencies": {
+    "async-file": "^2.0.2"
+  },
   "jest": {
     "transform": {
       ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
@@ -82,7 +84,7 @@
       "path": "node_modules/cz-conventional-changelog"
     }
   },
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "keywords": [
     "diskdb",
     "file system db",

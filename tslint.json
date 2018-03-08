@@ -12,6 +12,7 @@
       "public-before-private",
       "variables-before-functions"
     ],
+    "no-console": true,
     "quotes": [
       2,
       "backtick",

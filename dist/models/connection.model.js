@@ -1,3 +1,4 @@
+"use strict";
 /*
  * disk-db-async
  * http://arvindr21.github.io/disk-db-async
@@ -5,7 +6,5 @@
  * Copyright (c) 2018 Arvind Ravulavaru
  * Licensed under the MIT license.
  */
-
-import DiskDBAsync from './lib/diskdbasync.lib';
-
-module.exports = DiskDBAsync;
+Object.defineProperty(exports, "__esModule", { value: true });
+//# sourceMappingURL=connection.model.js.map

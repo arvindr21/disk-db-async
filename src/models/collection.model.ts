@@ -6,10 +6,9 @@
  * Licensed under the MIT license.
  */
 
-import IConnOpts from './connection-options';
-
-export default interface IConnection {
+export default interface ICollection {
 	path: string;
-	collections: Array<string>;
-	options?: IConnOpts;
+	name: string;
+	contents: any;
+	existing: boolean;
 }
