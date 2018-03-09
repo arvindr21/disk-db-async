@@ -8,6 +8,7 @@ node_js:
 install:
   - npm config set spin=false
   - npm install
+  - npm run build
 script:
   - npm test
 after_script:
