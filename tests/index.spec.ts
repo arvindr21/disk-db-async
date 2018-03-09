@@ -1,7 +1,7 @@
 'use strict';
 
 import 'jest';
-const DiskDBAsync = require("../src");
+const DiskDBAsync = require("../dist");
 
 describe('DiskDBAsync.passTests', () => {
 	it('is function', () => {
